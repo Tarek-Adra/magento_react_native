@@ -42,16 +42,16 @@ const defaultProps = {
 };
 
 const HomeScreen = ({ status, errorMessage, slider, featuredCategories }) => {
-  const media = useMemo(
-    () =>
-      slider.map(slide => ({
-        source: { uri: `${magento.getMediaUrl()}${slide.image}` },
-      })),
-    [slider],
-  );
+  // const media = useMemo(
+  //   () =>
+  //     slider.map(slide => ({
+  //       source: { uri: `${magento.getMediaUrl()}${slide.image}` },
+  //     })),
+  //   [slider],
+  // );
   return (
     <GenericTemplate scrollable status={status} errorMessage={errorMessage}>
-      <ImageSlider
+      {/* <ImageSlider
         autoplay
         containerStyle={styles.imageSliderContainer}
         media={media}
@@ -64,24 +64,24 @@ const HomeScreen = ({ status, errorMessage, slider, featuredCategories }) => {
           </Text>
           <FeaturedCategoryList categoryId={parseInt(key, 10)} />
         </Card>
-      ))}
+      ))} */}
     </GenericTemplate>
   );
 };
 
-const styles = StyleSheet.create({
-  imageSliderContainer: {
-    height: DIMENS.homeScreen.sliderHeight,
-  },
-  card: {
-    borderRadius: 0,
-    marginTop: SPACING.large,
-  },
-  title: {
-    marginTop: SPACING.small,
-    marginLeft: SPACING.medium,
-  },
-});
+// const styles = StyleSheet.create({
+//   imageSliderContainer: {
+//     height: DIMENS.homeScreen.sliderHeight,
+//   },
+//   card: {
+//     borderRadius: 0,
+//     marginTop: SPACING.large,
+//   },
+//   title: {
+//     marginTop: SPACING.small,
+//     marginLeft: SPACING.medium,
+//   },
+// });
 
 HomeScreen.propTypes = propTypes;
 

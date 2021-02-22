@@ -1,0 +1,11 @@
+{
+  "common": {
+    "ok": "Está bien!",
+    "cancel": "Cancelar",
+    "back": "Trasero",
+    "brandName": "Youjad.com"
+  },
+  "cartScreen": {
+    "title": "Carrito"
+  }
+}
