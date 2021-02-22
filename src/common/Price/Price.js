@@ -60,19 +60,19 @@ const Price = ({
       <Text
         bold={isBold()}
         style={styles.discountPriceText}
-      >{`${currencySymbol}${formatPrice(discountPrice)}`}</Text>
+      >vvvvv{`${currencySymbol}${formatPrice(discountPrice)}`}</Text>
     );
 
   if (isNumber(startingPrice)) {
     return (
       <View style={styles.container}>
         {!isNumber(endingPrice) ? <Text>From </Text> : null}
-        <Text type="label" bold>{`${currencySymbol}${formatPrice(
+        <Text type="label" bold>{`${currencySymbol} ${formatPrice(
           startingPrice,
           currencyRate,
         )}`}</Text>
         {isNumber(endingPrice) ? (
-          <Text type="label" bold>{` - ${currencySymbol}${formatPrice(
+          <Text type="label" bold>{` - ${currencySymbol} ${formatPrice(
             endingPrice,
             currencyRate,
           )}`}</Text>
@@ -90,7 +90,7 @@ const Price = ({
           styles.basePriceText(basePrice, discountPrice, theme),
           basePriceStyle,
         ]}
-      >{`${currencySymbol}${formatPrice(basePrice, currencyRate)}`}</Text>
+      >{`${currencySymbol} ${formatPrice(basePrice, currencyRate)}`}</Text>
     </View>
   );
 };
