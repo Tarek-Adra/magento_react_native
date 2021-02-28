@@ -9,6 +9,7 @@ export const formatHomeData = payload => {
     featuredCategories[key].items = [];
     featuredCategories[key].errorMessage = '';
     featuredCategories[key].title = content.featuredCategories[key].title;
+    featuredCategories[key].image = content.featuredCategories[key].image;
   });
   content.featuredCategories = featuredCategories;
   return content;
